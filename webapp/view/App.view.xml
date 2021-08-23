@@ -19,25 +19,25 @@
                     <Table id="idTableProductos" items="{path: 'productoJSON>/value', sorter: {path: 'codigo_producto'}}">
                         <columns>
                             <Column>
-                                <Text text="Codigo Producto" />
+                                <Text text="{i18n>codigoProducto}"/>
                             </Column>
                         <Column>
-                                <Text text="Codigo interno" />
+                                <Text text="{i18n>cod_interno}"/>
                         </Column>
                         <Column>
-                                <Text text="Fecha creacion" />
+                                <Text text="{i18n>fecha_creacion}"/>
                         </Column>
                         <Column>
-                                <Text text="Fecha vencimiento" />
+                                <Text text="{i18n>fecha_vencimiento}"/>
                         </Column>
                         <Column>
-                                <Text text="Descuento producto" />
+                                <Text text="{i18n>desc_producto}"/>
                         </Column>
                         <Column>
-                                <Text text="Nombre empresa" />
+                                <Text text="{i18n>nombre_empresa}"/>
                         </Column>
                         <Column>
-                                <Text text="Origen" />
+                                <Text text="{i18n>origen}"/>
                         </Column>
                         </columns>
                             <items>

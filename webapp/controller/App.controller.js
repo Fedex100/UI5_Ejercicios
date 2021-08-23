@@ -15,6 +15,10 @@ sap.ui.define([
             onInit: async function () {
              
             this.loadModel();
+            /*const oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
+            alert(oBundle.getText("testIdiomaControlador"))
+            var sCurrentLocale = sap.ui.getCore().getConfiguration().getLanguage();
+            alert(sCurrentLocale);*/
             },
             
             onSearch: function (oEvent) {
@@ -40,6 +44,7 @@ sap.ui.define([
                 var oList = this.byId("idTableProductos");
                 var oBinding = oList.getBinding("items");
                 oBinding.filter(oFilters, "Application");
+                
             },
 
             getLocalJSON: function (sJsonName) {
