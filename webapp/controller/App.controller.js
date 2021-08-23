@@ -22,7 +22,7 @@ sap.ui.define([
                 var aFilters = [];
                 var sQuery = oEvent.getSource().getValue();
                 if (sQuery && sQuery.length > 0) {
-                    var filter = new Filter("codigo_producto", FilterOperator.Contains, sQuery);
+                    var filter = new Filter("origen", FilterOperator.Contains, sQuery);
                     aFilters.push(filter);
                 }
 
