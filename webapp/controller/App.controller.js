@@ -15,10 +15,7 @@ sap.ui.define([
             onInit: async function () {
              
             this.loadModel();
-            /*const oBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
-            alert(oBundle.getText("testIdiomaControlador"))
-            var sCurrentLocale = sap.ui.getCore().getConfiguration().getLanguage();
-            alert(sCurrentLocale);*/
+            
             },
             
             onSearch: function (oEvent) {
