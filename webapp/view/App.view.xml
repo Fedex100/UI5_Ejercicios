@@ -1,0 +1,75 @@
+<mvc:View
+    controllerName="ejercici.ejercicio6.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content> 
+                        
+                        <OverflowToolbar>
+                            <content>
+                                <SearchField liveChange=".onSearch" width="100%" />
+                            </content>
+                        </OverflowToolbar>
+
+                    <Table id="idTableProductos" items="{path: 'productoJSON>/value', sorter: {path: 'codigo_producto'}}">
+                        <columns>
+                            <Column>
+                                <Text text="Codigo Producto" />
+                            </Column>
+                        <Column>
+                                <Text text="Codigo interno" />
+                        </Column>
+                        <Column>
+                                <Text text="Fecha creacion" />
+                        </Column>
+                        <Column>
+                                <Text text="Fecha vencimiento" />
+                        </Column>
+                        <Column>
+                                <Text text="Descuento producto" />
+                        </Column>
+                        <Column>
+                                <Text text="Nombre empresa" />
+                        </Column>
+                        <Column>
+                                <Text text="Origen" />
+                        </Column>
+                        </columns>
+                            <items>
+                                <ColumnListItem>
+                                <cells>
+                                    <Text text="{productoJSON>codigo_producto}"/>
+                                </cells>
+                                <cells>
+                                    <Text text="{productoJSON>cod_interno}"/>
+                                </cells>
+                                <cells>
+                                    <Text text="{productoJSON>fecha_creacion}"/>
+                                </cells>
+                                <cells>
+                                    <Text text="{productoJSON>fecha_vencimiento}"/>
+                                </cells>
+                                <cells>
+                                    <Text text="{productoJSON>desc_producto}"/>
+                                </cells>
+                                <cells>
+                                    <Text text="{productoJSON>nombre_empresa}"/>
+                                </cells>
+                                <cells>
+                                    <Text text="{productoJSON>origen}"/>
+                                </cells>
+                                </ColumnListItem>
+                            </items>
+                    </Table>
+
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
