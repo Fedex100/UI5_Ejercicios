@@ -22,14 +22,24 @@ sap.ui.define([
                 var aFilters = [];
                 var sQuery = oEvent.getSource().getValue();
                 if (sQuery && sQuery.length > 0) {
-                    var filter = new Filter("origen", FilterOperator.Contains, sQuery);
-                    aFilters.push(filter);
+                    
+                    var filterOrigen = new Filter("origen", FilterOperator.Contains, sQuery);
+                    aFilters.push(filterOrigen);
+                    
+                    var filterCodProducto = new Filter("codigo_producto", FilterOperator.Contains, sQuery);
+                    aFilters.push(filterCodProducto);
+                    
+                    var filterNomEmpresa = new Filter("nombre_empresa", FilterOperator.Contains, sQuery)
+                    aFilters.push(filterNomEmpresa);
+
+                    var oFilters = new Filter(aFilters);
+
                 }
 
                 // update list binding
                 var oList = this.byId("idTableProductos");
                 var oBinding = oList.getBinding("items");
-                oBinding.filter(aFilters, "Application");
+                oBinding.filter(oFilters, "Application");
             },
 
             getLocalJSON: function (sJsonName) {
