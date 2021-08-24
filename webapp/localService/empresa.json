@@ -1,0 +1,22 @@
+{
+    "empresa": {
+        "nombre": "Accenture",
+        "informacion": {
+            "empleados": "3"
+        },
+        "contactos": [
+            {
+                "nombre": "Barbara",
+                "telefono": "11152954873"
+            },
+            {
+                "nombre": "Jose",
+                "telefono": "111546954734"
+            },
+            {
+                "nombre": "Cristina",
+                "telefono": "11152989275"
+            }
+        ]
+    }
+}

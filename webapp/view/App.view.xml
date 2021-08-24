@@ -1,0 +1,40 @@
+<mvc:View
+    controllerName="ejer6.ejer6.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>appTitle}">
+					<content>
+                        
+                        <FlexBox direction="Column" alignItems="Start">
+				               
+                                <Input
+                                    placeholder="Empresa">
+                                </Input>
+                                <Input
+                                    placeholder="Cantidad de Empleados">
+                                </Input>
+                                <Select
+                                    id="campoSelec"
+                                    forceSelection="false"
+                                    items="{oContactos>/empresa/contactos/}"
+                                    change="onPress">
+                                    <items>
+                                        <core:Item key="{oContactos>telefono}" text="{oContactos>nombre}" />
+                                    </items>
+                                </Select>
+                            <Button text="Aceptar" type="Emphasized"/> 
+			            </FlexBox>
+                        
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
