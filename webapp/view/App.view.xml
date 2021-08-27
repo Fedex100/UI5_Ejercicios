@@ -1,0 +1,116 @@
+<mvc:View
+    controllerName="Ejer.ejer14.controller.App"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    displayBlock="true"
+    
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                        <Panel id="Panel_1" visible="true">
+                            
+                            <l:VerticalLayout class="sapUiContentPadding" width="80%">
+                                <MessageStrip type="Information"
+                                              text="Enter at least 3 symbols for credit card name"/>
+                                
+                                
+                                <Input
+                                    id = "namCardId"
+                                    description="{i18n>namCard}"
+                                    value="{oModel1>/recipient/namCard}"
+                                    valueLiveUpdate="true"
+                                    fieldWidth="60%"
+                                    required="true"
+                                    />
+                            
+
+                                <Input
+                                    id = "numCardId"
+                                    description="{i18n>numCard}"
+                                    value="{oModel1>/recipient/numCard}"
+                                    valueLiveUpdate="true"
+                                    width="auto"/>
+                                <Input
+                                    id = "secCodeId"
+                                    type="Password"
+                                    description="{i18n>secCode}"
+                                    value="{oModel1>/recipient/secCode}"
+                                    valueLiveUpdate="true"
+                                    width="auto"/>
+                                <Input
+                                    id = "expDateId"
+                                    description="{i18n>expDate}"
+                                    value="{oModel1>/recipient/expDate}"
+                                    valueLiveUpdate="true"
+                                    width="auto"/>
+
+                                    <DatePicker
+                                        id="selFechaId" class="sapUiSmallMarginBottom"
+                                        value="{oModel1>/recipient/datePicker}"/>
+                                <Button
+									text="{i18n>btnNext}"
+									press="btnSiguiente"/>
+                            </l:VerticalLayout>
+                        </Panel>
+                            
+                        <Panel id="Panel_2" visible="false">
+                            <l:VerticalLayout class="sapUiContentPadding" width="80%">
+                                
+                                <CheckBox 
+                                          id="deliAddrId"
+                                          text="{i18n>deliAddr}" 
+                                          valueState="Information" 
+                                          selected="false"/>
+                                <Input
+                                    id = "addrId"
+                                    description="{i18n>addr}"
+                                    value="{oModel2>/recipient/addr}"
+                                    valueLiveUpdate="true"
+                                    width="auto"
+                                    required="true"/>
+                                <Input
+                                    id = "cityId"
+                                    description="{i18n>city}"
+                                    value="{oModel2>/recipient/city}"
+                                    valueLiveUpdate="true"
+                                    width="auto"
+                                    required="true"/>
+                                <Input
+                                    id = "zipCodId"
+                                    description="{i18n>zipCod}"
+                                    value="{oModel2>/recipient/zipCod}"
+                                    valueLiveUpdate="true"
+                                    type="Number"
+                                    width="auto"/>
+                                <Input
+                                    id = "countryId"
+                                    description="{i18n>country}"
+                                    value="{oModel2>/recipient/country}"
+                                    valueLiveUpdate="true"
+                                    width="auto"/>
+
+                                <Label text="{i18n>note}"/>
+                                    <TextArea id="TypeHere"
+                                        value="{oModel1>/recipient/note}"
+                                        liveChange="handleLiveChange"
+                        
+                                    />
+
+                                <Button
+									text="{i18n>btnFinish}"
+									press=".terminar"/>
+                            </l:VerticalLayout>
+                        </Panel>
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
+
