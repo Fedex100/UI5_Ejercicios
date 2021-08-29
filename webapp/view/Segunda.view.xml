@@ -1,0 +1,21 @@
+<mvc:View
+    controllerName="ejer15.controller.Segunda"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:tnt="sap.tnt"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    
+>
+<Page id="page_2" title="{i18n>title}">
+
+    <VBox class="sapUiSmallMargin">
+        <Text text="Los botones que estan en pantalla te posibilitan entrar a la pagina 1 y 3"/>
+            
+            <Button text="Atras"
+                press=".onNavigate_0"/>
+
+    </VBox>
+
+</Page>
+
+</mvc:View>
