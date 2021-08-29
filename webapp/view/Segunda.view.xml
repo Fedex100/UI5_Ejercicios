@@ -12,7 +12,7 @@
         <Text text="Los botones que estan en pantalla te posibilitan entrar a la pagina 1 y 3"/>
             
             <Button text="Atras"
-                press=".onNavigate_0"/>
+                press=".onNavBack"/>
 
     </VBox>
 

@@ -1,10 +1,11 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/routing/History"
 ],
 	/**
 	 * @param {typeof sap.ui.core.mvc.Controller} Controller
 	 */
-	function (Controller) {
+	function (Controller, History) {
 		"use strict";
 
 		return Controller.extend("ejer15.controller.Segunda", {
@@ -12,10 +13,16 @@ sap.ui.define([
 
             },
             
-            onNavigate_0: function() {
-                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                oRouter.navTo("Main")
-            }
+           onNavBack: function () {
+                const oHistory = History.getInstance();
+                const sPreviousHash = oHistory.getPreviousHash();
+
+                if (sPreviousHash !== undefined) {
+                    window.history.go(-1)
+                } else {
+                    this.getRouter().navTo("Main", {}, true /*no history*/);
+                }
+           }
             
 		});
 	});
