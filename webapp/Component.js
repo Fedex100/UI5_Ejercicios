@@ -44,7 +44,6 @@ sap.ui.define([
             
             var oModel2 = new JSONModel(oDataPanel2);
             this.setModel(oModel2, 'oModel2');
-            
     
 			// enable routing
 			this.getRouter().initialize();

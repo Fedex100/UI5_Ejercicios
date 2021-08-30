@@ -2,26 +2,28 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
 >
-    <Dialog
+    
+<Dialog
       id="cargaDatos"
       title="{i18n>titleDialog}"
       stretch="true"
-      >
+>
+    <VBox>
     
-      <Text maxLines="2" text="{oModel1>/recipient/namCard}"/>
-     
-      <Text maxLines="2" text="{oModel1>/recipient/numCard}"/>
-      
+      <Text text="{oModel1>/recipient/namCard}"/>
+      <Text text="{oModel1>/recipient/numCard}"/>
       <Text text="{oModel1>/recipient/secCode}"/>
       <Text text="{oModel1>/recipient/expDate}"/>
-      <Text text="{oModel1>/recipient/datePicker}"/>
+      <Text text="{path:'oModel1>/recipient/datePicker', formatter:'.Formatter.formatDate'}"/>
       <Text text="{oModel2>/recipient/addr}"/>
       <Text text="{oModel2>/recipient/city}"/>
       <Text text="{oModel2>/recipient/zipCod}"/>
       <Text text="{oModel2>/recipient/country}"/>
-      <Text maxLines="10" text="{oModel1>/recipient/note}"/>
-
-      <beginButton>
+      <Text text="{oModel1>/recipient/note}"/>
+    
+    </VBox> 
+    
+    <beginButton>
         <Button
             text="Cerrar"
             press=".onCloseDialog"/>

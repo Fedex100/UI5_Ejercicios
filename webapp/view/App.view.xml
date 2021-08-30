@@ -19,15 +19,19 @@
                                 <MessageStrip type="Information"
                                               text="Enter at least 3 symbols for credit card name"/>
                                 
-                                
+                                <Label 
+                                       id="namCarReqId"
+                                       labelFor="namCardId"
+                                       required="true"/>
+
                                 <Input
-                                    id = "namCardId"
+                                    id ="namCardId"
                                     description="{i18n>namCard}"
                                     value="{oModel1>/recipient/namCard}"
                                     valueLiveUpdate="true"
                                     fieldWidth="60%"
-                                    required="true"
                                     />
+                                
                             
 
                                 <Input
@@ -67,20 +71,32 @@
                                           text="{i18n>deliAddr}" 
                                           valueState="Information" 
                                           selected="false"/>
+                                <Label 
+                                       id="addReqID"
+                                       labelFor="addrId"
+                                       required="true"/>
                                 <Input
                                     id = "addrId"
                                     description="{i18n>addr}"
                                     value="{oModel2>/recipient/addr}"
                                     valueLiveUpdate="true"
-                                    width="auto"
-                                    required="true"/>
+                                    width="auto"/>
+                                
+                                <Label 
+                                       id="cityReqId"
+                                       labelFor="addrId"
+                                       required="true"/>
                                 <Input
                                     id = "cityId"
                                     description="{i18n>city}"
                                     value="{oModel2>/recipient/city}"
                                     valueLiveUpdate="true"
-                                    width="auto"
-                                    required="true"/>
+                                    width="auto"/>
+
+                                <Label 
+                                       id="zipCodReqId"
+                                       labelFor="addrId"
+                                       required="true"/>
                                 <Input
                                     id = "zipCodId"
                                     description="{i18n>zipCod}"
@@ -88,6 +104,11 @@
                                     valueLiveUpdate="true"
                                     type="Number"
                                     width="auto"/>
+                                
+                                <Label 
+                                       id="countryReqId"
+                                       labelFor="addrId"
+                                       required="true"/>
                                 <Input
                                     id = "countryId"
                                     description="{i18n>country}"

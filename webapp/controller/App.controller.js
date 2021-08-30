@@ -1,14 +1,16 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    //"sap/m/MessageToast",
-    "sap/ui/core/Fragment"
+    "sap/ui/core/Fragment",
+    "Ejer/ejer14/util/Formatter"
 ],
 	
-	function (Controller,Fragment) {
+	function (Controller, Fragment, Formatter) {
 		"use strict";
 
 		return Controller.extend("Ejer.ejer14.controller.App", {
-			onInit: function () {
+            Formatter: Formatter,
+
+            onInit: function () {
                 
             },
             
@@ -27,51 +29,36 @@ sap.ui.define([
                     
                     this.getView().byId("Panel_2").setVisible(true);
                     this.getView().byId("Panel_1").setVisible(false);
+                    
+
                 }   
                 
         },
 
             terminar : function () {
-            var oBundle = this.getView().getModel("i18n").getResourceBundle();
-            
-            var sNamCard = this.getView().getModel('oModel1').getProperty("/recipient/namCard");
-            var sNumCard = this.getView().getModel('oModel1').getProperty("/recipient/numCard");
-            var sSecCode = this.getView().getModel('oModel1').getProperty("/recipient/secCode");
-            var sExpDate = this.getView().getModel('oModel1').getProperty("/recipient/expDate");
-            var sDatePicker = this.getView().getModel('oModel1').getProperty("/recipient/datePicker");
-            
-           
-            var sAddr = this.getView().getModel('oModel2').getProperty("/recipient/addr");
-            var sCity = this.getView().getModel('oModel2').getProperty("/recipient/city");
-            var sZipCode = this.getView().getModel('oModel2').getProperty("/recipient/zipCod");
-            var sCountry = this.getView().getModel('oModel2').getProperty("/recipient/country");
-            var sNote = this.getView().getModel('oModel2').getProperty("/recipient/note");
+                var oBundle = this.getView().getModel("i18n").getResourceBundle();
+                
+                var sAddr = this.getView().getModel('oModel2').getProperty("/recipient/addr");
+                var sCity = this.getView().getModel('oModel2').getProperty("/recipient/city");
+                var sZipCode = this.getView().getModel('oModel2').getProperty("/recipient/zipCod");
+                var sCountry = this.getView().getModel('oModel2').getProperty("/recipient/country");
+                
+                if (sAddr === "" || sCity === "" || sZipCode === "" || sCountry=== ""){
+                    alert("Debes ingresa un valor")
+                    }
+                else{
+                    this.getView().byId("namCardId").setEditable(false);
+                    this.getView().byId("numCardId").setEditable(false);
+                    this.getView().byId("secCodeId").setEditable(false);
+                    this.getView().byId("expDateId").setEditable(false);
+                    this.getView().byId("selFechaId").setEditable(false);
+                    
+                    this.getView().byId("Panel_2").setVisible(true);
+                    this.getView().byId("Panel_1").setVisible(false);
+                    
+                this.onDialog();
+                }
 
-             
-
-
-            var sNamCardMsg = oBundle.getText(sNamCard);
-            var sNumCardMsg = oBundle.getText(sNumCard);
-            var sSecCodeMsg = oBundle.getText(sSecCode);
-            var sExpDateMsg = oBundle.getText(sExpDate);
-            var sDatePickerMsg = oBundle.getText(sDatePicker);
-
-            
-            var sDeliAddrMsg = oBundle.getText(sDeliAddress);
-
-            var sAddrMsg = oBundle.getText(sAddr);
-            var sCityMsg = oBundle.getText(sCity);
-            var sZipCodeMsg = oBundle.getText(sZipCode);
-            var sCountryMsg = oBundle.getText(sCountry);
-            var sNoteMsg = oBundle.getText(sNote);
-
-            
-            var msgFinal = "Name on Card: " + sNamCardMsg + "Card number: " + sNumCardMsg + "Security Code: " + sSecCodeMsg + "Experation date: "  + sExpDateMsg + "Fecha: " + sDatePickerMsg + "Address: " + sAddrMsg + "City: " +sCityMsg + "Zip Code: " + sZipCodeMsg + "Country: " + sCountryMsg + "Note: " + sNoteMsg;
-            
-            //console.log(sDeliAddrMsg);
-            //MessageToast.show(msgFinal);
-            //this.cheqAddr();
-            //this.onDialog();
         },
             cheqAddr: function () {
                 
