@@ -1,0 +1,7 @@
+<core:FragmentDefinition 
+	controllerName="sap.m.sample.IconTabBarInlineIcons.C"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<IconTabBar id="idIconTabBar" 
+    class="sapUiResponsiveContentPadding" />
+</core:FragmentDefinition>
