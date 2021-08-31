@@ -1,0 +1,158 @@
+<mvc:View
+		height="100%"
+		controllerName="ejer17.ejer17.controller.App"
+		xmlns:form="sap.ui.layout.form"
+		xmlns:core="sap.ui.core"
+		xmlns:u="sap.ui.unified"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m">
+<App id="app">	
+        <NavContainer id="wizardNavContainer">
+			<pages>
+				<Page
+				id="wizardContentPage"
+				showHeader="false">
+					<content>
+						<Wizard id="CreateProductWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
+								complete="wizardCompletedHandler">
+							<WizardStep id="ProductTypeStep"
+					                    validated="true">
+								<MessageStrip class="sapUiSmallMarginBottom"
+										text="The Wizard control is supposed to break down large tasks, into smaller steps, easier for the user to work with."
+										showIcon="true"/>
+								<Text class="sapUiSmallMarginBottom"
+										text="Sed fermentum, mi et tristique ullamcorper, sapien sapien faucibus sem, quis pretium nibh lorem malesuada diam."/>	
+							</WizardStep>
+							<WizardStep id="ProductInfoStep"
+										validated="true"
+										activate="additionalInfoValidation">
+								<MessageStrip class="sapUiSmallMarginBottom"
+										text="Validation in the wizard is controlled by calling the validateStep(Step) and invalidateStep(Step) methods "
+										showIcon="true"/>
+								<Text text="Cras tellus leo, volutpat vitae ullamcorper eu, posuere malesuada nisl. 
+                                Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar."/>
+								<form:SimpleForm
+										editable="true">
+									<Label text="Nombre y Apellido" required="true"/>
+									<Input  id="nameId"
+											valueState="{/name}"  
+                                            liveChange="additionalInfoValidation"
+											placeholder="Enter name with length greater than 6" 
+                                            value="{/name}"/>
+									<Label text="Sexo"/>
+									<Select selectedKey="{/sexo}">
+										<core:Item key="no_declara" text="No declara"/>
+                                        <core:Item key="masculino" text="Masculino"/>
+										<core:Item key="femenino" text="Femenino"/>
+										<core:Item key="otro" text="Otro"/>
+										
+									</Select>
+									<Label text="Es mayor de 18 Años"/>
+                                    <CheckBox 
+                                          id="mayorDeId"
+                                          valueState="Information" 
+                                          selected="false"/>
+								</form:SimpleForm>
+							</WizardStep>
+							<WizardStep id="OptionalInfoStep"
+										validated="true"
+										activate="optionalStepActivation">
+								<MessageStrip class="sapUiSmallMarginBottom"
+										text="You can validate steps by default with the validated='true' property of the step. The next button is always enabled."
+										showIcon="true"/>
+								<Text text="Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. 
+                                Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. 
+                                Donec ppellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem."/>
+								<form:SimpleForm
+										editable="true">
+									<Label text="Fecha de nacimiento"/>
+									<DatePicker
+											id="fechaNacId"
+											displayFormat="short"
+											value="{/fechaNac}"/>
+									<Label text="Empresa de telefonia"/>
+									<SegmentedButton selectedKey="{/empresaTelType}">
+										<items>
+											<SegmentedButtonItem key="Empresa 1" text="Empresa 1"/>
+											<SegmentedButtonItem key="Empresa 2" text="Empresa 2"/>
+											<SegmentedButtonItem key="Empresa 3" text="Empresa 3"/>
+											<SegmentedButtonItem key="Empresa 4" text="Empresa 4"/>
+										</items>
+									</SegmentedButton>
+									<Label text="Telefono"/>
+									<Input id="telefonoId"
+                                        />
+                                        
+								</form:SimpleForm>
+							</WizardStep>
+							
+						</Wizard>
+					</content>
+					<footer>
+						<OverflowToolbar>
+							<ToolbarSpacer/>
+							<Button text="Cancel" press="handleWizardCancel"/>
+						</OverflowToolbar>
+					</footer>
+				</Page>
+				<Page id="wizardReviewPage" showHeader="false">
+					<content>
+						<form:SimpleForm
+								title="1."
+								minWidth="1024"
+								editable="false"
+								layout="ResponsiveGridLayout">
+						</form:SimpleForm>
+
+						<form:SimpleForm
+								title="2."
+								minWidth="1024"
+								editable="false"
+								layout="ResponsiveGridLayout">
+							<form:content>
+								<Label text="Nombre y apellido"/>
+								<Text id="nameChosen" text="{/name}"/>
+								
+                                <Label text="Sexo"/>
+								<Text id="sexoChosen" text="{/sexo}"/>
+								
+                                <Link press="editStepTwo" text="Edit" />
+							</form:content>
+						</form:SimpleForm>
+
+						<form:SimpleForm
+								title="3."
+								minWidth="1024"
+								editable="false"
+								layout="ResponsiveGridLayout">
+							<form:content>
+								<Label text="Some text"/>
+								<Text text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. "/>
+								
+                                <Label text="Fecha de nacimiento"/>
+								<Text id="FechaNac" text="{/fechaNac}"/>
+								
+                                <Label text="Empresa de telefonia"/>
+                                <Text id="empresaTelChosen" text="{/empresaTelType}"/>
+
+                                <Label text="Telefono"/>
+                                <Text id="telefonoChosen" text="{/telefono}"/>
+								
+                                <Link press="editStepThree" text="Edit" />
+							</form:content>
+						</form:SimpleForm>
+					</content>
+					<footer>
+						<Bar>
+							<contentRight>
+								<Button text="Submit" press="handleWizardSubmit"/>
+								<Button text="Cancel" press="handleWizardCancel"/>
+							</contentRight>
+						</Bar>
+					</footer>
+				</Page>
+			</pages>
+		</NavContainer>
+</App>
+</mvc:View>
