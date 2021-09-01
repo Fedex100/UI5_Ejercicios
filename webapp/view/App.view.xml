@@ -1,0 +1,49 @@
+<mvc:View
+	controllerName="ejer19.ejer19.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<SplitApp
+		id="SplitAppDemo"
+		initialDetail="detail"
+		initialMaster="master">
+		<detailPages>
+			<Page
+				id="detail"
+				title="Detail"
+				backgroundDesign= "Solid">
+				<Label text="Product Details" />
+                <VBox class="sapUiSmallMargin">
+                    <Text text="Codigo de Producto: 22222 1" />
+                    <Text text="Desc Producto: Producto 1" />
+                </VBox>
+			</Page>
+			<Page
+				id="detail2"
+				title="Detail"
+				backgroundDesign= "Solid">
+				<Label text="Product Details" />
+                <VBox class="sapUiSmallMargin">
+                    <Text text="Codigo de Producto: 44444 2" />
+                    <Text text="Desc Producto: Producto 2" />
+                </VBox>
+			</Page>
+			
+		</detailPages>
+		<masterPages>
+			
+			<Page
+				id="master"
+				title="Master"
+				backgroundDesign="List">
+				<List itemPress=".onListItemPress">
+					<items>
+						<StandardListItem title="22222 1" type="Active" custom:to="detail" />
+						<StandardListItem title="44444 2" type="Active" custom:to="detail2" />
+					</items>
+				</List>
+			</Page>
+            
+		</masterPages>
+	</SplitApp>
+</mvc:View>
