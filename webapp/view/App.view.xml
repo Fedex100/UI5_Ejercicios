@@ -1,0 +1,46 @@
+<mvc:View
+    controllerName="ejer21.ejer21.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                    <Button tooltip="Ordenar" icon="sap-icon://sort" press=".onSort"/>
+                    </content>
+                    <content>
+                    <Table id="idTableProductos" items="{path: 'productoJSON>/value'}">   
+                         <columns>
+                            <Column>
+                                <Text text="{i18n>country}" />
+                            </Column>
+                        </columns>
+                         <columns>
+                            <Column>
+                                <Text text="{i18n>compName}" />
+                            </Column>
+                        </columns>                    
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <Text text="{productoJSON>Country}"/>
+                            </cells>
+                            <cells>
+                                <Text text="{productoJSON>CompanyName}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+
+                </Table>
+                </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
+
+            
