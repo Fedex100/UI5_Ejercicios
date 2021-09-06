@@ -1,0 +1,33 @@
+specVersion: '2.4'
+metadata:
+  name: 'ejer_22'
+type: application
+server:
+  customMiddleware:
+  - name: fiori-tools-proxy
+    afterMiddleware: compression
+    configuration:
+      ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+      backend:
+      - path: /v3
+        url: https://services.odata.org
+      ui5:
+        path: 
+        - /resources
+        - /test-resources
+        url: https://ui5.sap.com
+        version:  # The UI5 version, for instance, 1.78.1. Empty means latest version
+  - name: ui5-middleware-livereload
+    afterMiddleware: compression
+    configuration:
+       port: 35729
+       path: ejer22/webapp
+  - name: ui5-middleware-cfdestination
+    afterMiddleware: compression
+    configuration:
+      debug: true
+      port: 1091
+      xsappJson: webapp/xs-app.json
+      destinations:
+      - name: "Northwind"
+        url: "https://services.odata.org/"
