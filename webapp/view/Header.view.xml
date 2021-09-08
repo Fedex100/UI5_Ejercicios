@@ -1,0 +1,109 @@
+<mvc:View
+    controllerName="integ1.integ1.controller.Header"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>titulo}">
+					<content>
+                       <VBox>
+                        <Panel>
+                            <FlexBox justifyContent="Center">
+                                
+                                <Input
+                                    id ="paisId"
+                                    placeholder="{i18n>buscar}"
+                                    value="{oDataIngresada>/data/pais}"
+                                    valueLiveUpdate="true"
+                                    fieldWidth="30%"
+                                    />
+                                
+                                <Select
+                                    id="proveedorId"
+						            enabled="true"
+						            forceSelection="false"
+                                    items="{path : 'productosJSON>/Productos'}"
+                                    selectedKey="{oDataIngresada>/data/proveedor}"
+                                    >
+			                        <core:Item  key="{productosJSON>Proveedor}" text="{productosJSON>Proveedor}" />
+				                </Select>
+                                
+                                <DatePicker
+                                        id="selFechaId" class="sapUiSmallMarginBottom"
+                                        value="{oDataIngresada>/data/fecha}"/>
+                                <Button
+								text="{i18n>ir}"
+								press="btnIr"
+                                />
+                            </FlexBox>
+                            </Panel>
+                            
+                        </VBox> 
+                        
+                        <Table id="idTableProductos" items="{path: 'productosJSON>/Productos'}"  visible="false">
+                        
+                        <headerToolbar>
+                            <OverflowToolbar>
+                            <content>
+                                <SearchField liveChange=".onSearch" width="100%" />
+                            </content>
+                            </OverflowToolbar>
+                        </headerToolbar>
+
+                            <columns>
+                                <Column>
+                                    <Text text="{i18n>prod}" />
+                                </Column>
+                                <Column>
+                                    <Text text="{i18n>prov}" />
+                                </Column>
+                                <Column>
+                                    <Text text="{i18n>tam}" />
+                                </Column>
+                                <Column>
+                                    <Text text="{i18n>peso}" />
+                                </Column>
+                                <Column>
+                                    <Text text="{i18n>valor}" />
+                                </Column>
+                                
+                            </columns>
+                        <items>
+                        
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="{productosJSON>Producto}"/>
+                                </cells>
+                                <cells>
+                                    <Text text="{productosJSON>Proveedor}"/>
+                                </cells>
+                                <cells>
+                                    <Text text="{productosJSON>Tamaño}"/>
+                                </cells>
+                                <cells>
+                                    <Text text="{productosJSON>Peso}"/>
+                                </cells>
+                                <cells>
+                                    
+                                <ObjectNumber 
+                                unit="EUR"
+                                state="{
+                                    path:'{productos>Valor}',
+                                    formatter:'.Formatter2.quantityState'
+                                }"
+                                ></ObjectNumber>
+                                </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+ 
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
