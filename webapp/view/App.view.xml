@@ -7,7 +7,7 @@
 	<Shell id="shell">
 		<App id="app">
 			
-                        <mvc:XMLView viewName="integ1.integ1.view.Header" />
+            <mvc:XMLView viewName="integ1.integ1.view.Header" />
                     
 		</App>
 	</Shell>

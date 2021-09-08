@@ -13,7 +13,7 @@ sap.ui.define([
 
 		return Controller.extend("integ1.integ1.controller.Header", {
             Formatter: Formatter,
-            Formatter: Formatter2,
+            Formatter2: Formatter2,
             
             onInit: async function () { 
                 

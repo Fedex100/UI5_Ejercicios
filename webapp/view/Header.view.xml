@@ -77,25 +77,27 @@
                             <ColumnListItem>
                                 <cells>
                                     <Text text="{productosJSON>Producto}"/>
-                                </cells>
-                                <cells>
+                                
                                     <Text text="{productosJSON>Proveedor}"/>
-                                </cells>
-                                <cells>
+                              
                                     <Text text="{productosJSON>Tamaño}"/>
-                                </cells>
-                                <cells>
-                                    <Text text="{productosJSON>Peso}"/>
-                                </cells>
-                                <cells>
-                                    
-                                <ObjectNumber 
-                                unit="EUR"
+                                
+                                    <ObjectNumber 
+                                number="{productosJSON>Peso}"
+                                unit="KG"
                                 state="{
-                                    path:'{productos>Valor}',
+                                    path:'productosJSON>Peso',
                                     formatter:'.Formatter2.quantityState'
                                 }"
-                                ></ObjectNumber>
+                                />
+                                
+                                <ObjectNumber 
+                                number="{
+                                    path: 'productosJSON>Valor',
+                                    formatter:'.Formatter.formatValor'
+                                }"
+                                unit="EUR"
+                                />
                                 </cells>
                         </ColumnListItem>
                     </items>

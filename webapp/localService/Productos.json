@@ -4,42 +4,42 @@
         "Producto":"10 Portable DVD",
         "Proveedor":"Titanium",
         "Tamaño":"24 x 19.5 x 29 cm",
-        "Peso":"0.84 KG",
+        "Peso":0.84,
         "Valor":49900.99
     },
     {
         "Producto":"7 Widescreen DVD",
         "Proveedor":"Titanium",
         "Tamaño":"21.4 x 19 x 27.6 cm",
-        "Peso":"0.79 KG",
+        "Peso":0.79,
         "Valor":24900.99
     },
     {
         "Producto":"Astro Laptop 1516",
         "Proveedor":"Ultrasonic United",
         "Tamaño":"30 x 18 x 3 cm",
-        "Peso":"4.2 KG",
+        "Peso":4.2,
         "Valor":989000
     },
     {
         "Producto":"Beam Breaker B-2",
         "Proveedor":"Technocom",
         "Tamaño":"30.4 x 23.1 x 23 cm",
-        "Peso":"1.7 KG",
+        "Peso":1.7,
         "Valor":46900.00
     },
     {
         "Producto":"Beam Breaker B-3",
         "Proveedor":"Technocom",
         "Tamaño":"30.4 x 23.1 x 23 cm",
-        "Peso":"2.5 KG",
+        "Peso":2.5,
         "Valor":2500.00
     },
     {
         "Producto":"Blaster Experts",
         "Proveedor":"Speaker Experts",
         "Tamaño":"13 x 11 x 17.5 cm",
-        "Peso":"1.4 KG",
+        "Peso":1.4,
         "Valor":2000.00
     }
 
