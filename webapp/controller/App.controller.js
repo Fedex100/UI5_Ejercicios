@@ -42,6 +42,11 @@ sap.ui.define([
                 var sCity = this.getView().getModel('oModel2').getProperty("/recipient/city");
                 var sZipCode = this.getView().getModel('oModel2').getProperty("/recipient/zipCod");
                 var sCountry = this.getView().getModel('oModel2').getProperty("/recipient/country");
+
+                var bCheqAddr = this.getView().getModel('oModel2').getProperty("/recipient/deliAddress");
+
+                this.cheqAddr(bCheqAddr);
+               
                 
                 if (sAddr === "" || sCity === "" || sZipCode === "" || sCountry=== ""){
                     alert("Debes ingresa un valor")
@@ -62,13 +67,13 @@ sap.ui.define([
         },
             cheqAddr: function () {
                 
-                let cheq = this.getView().byId("deliAddrId");
+                let bCheqAddr = this.getView().getModel('oModel2').setProperty("/recipient/deliAddress");
                 
-                if (cheq === true){
-                    console.log("Se deberá entregar en otra direccion");
+                if (bCheqAddr === true){
+                    alert("Se deberá entregar en otra direccion");
                 }
                 else {
-                    console.log("Se deberá entregar en la misma direccion");
+                    alert("Se deberá entregar en la misma direccion");
                 }
             },
             
