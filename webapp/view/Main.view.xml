@@ -1,0 +1,13 @@
+<mvc:View
+    controllerName="ejer1.ejer1.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Page id="page" title="{i18n>title}">
+		<content>
+        <Button text="PRESS" press="onPress"/>
+        </content>
+    </Page>
+    
+</mvc:View>
