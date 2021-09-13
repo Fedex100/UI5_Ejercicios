@@ -1,0 +1,102 @@
+<mvc:View
+    controllerName="ejer4.ejer4.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"  
+    xmlns:l="sap.ui.layout"  
+>
+	
+    <Page id="page" title="{i18n>title}">
+		<content>
+            <l:VerticalLayout  class="sapUiContentPadding" width="100%">
+                <Input
+                    id="nombreId"
+                    value="{oModel>/recipient/nombre}"
+                    enabled="true"
+                    description="Nombre"
+                    width="200px"
+                    fieldWidth="auto"
+                    class="sapUiSmallMarginBottom" />
+                <Input
+                    id="apellidoId"
+                    value="{oModel>/recipient/apellido}"
+                    enabled="true"
+                    description="Apellido"
+                    width="200px"
+                    fieldWidth="auto"
+                    class="sapUiSmallMarginBottom" />
+                <Input
+                    id="dniId"
+                    value="{oModel>/recipient/dni}"
+                    enabled="true"
+                    description="DNI"
+                    width="200px"
+                    fieldWidth="auto"
+                    class="sapUiSmallMarginBottom" />
+                <Input
+                    id="sexoId"
+                    value="{oModel>/recipient/sexo}"
+                    enabled="true"
+                    description="Sexo"
+                    width="200px"
+                    fieldWidth="auto"
+                    class="sapUiSmallMarginBottom" />
+                <Input
+                    id="emailId"
+                    value="{oModel>/recipient/email}"
+                    enabled="true"
+                    description="Email"
+                    width="200px"
+                    fieldWidth="auto"
+                    class="sapUiSmallMarginBottom" />
+                <Button text="Setear" width="auto" press="onPress"/>
+                <Button id="botonInformativo" text="Informativo" width="auto" press="onPress2" enabled="true"/>
+            </l:VerticalLayout>
+
+            <l:VerticalLayout  id="formulario2" class="sapUiContentPadding" width="100%" visible="false">
+                <Input
+                    id="nombreId2"
+                    value="{oModel>/recipient/nombre}"
+                    enabled="false"
+                    description="Nombre"
+                    width="200px"
+                    fieldWidth="auto"
+                    class="sapUiSmallMarginBottom" />
+                <Input
+                    id="apellidoId2"
+                    value="{oModel>/recipient/apellido}"
+                    enabled="false"
+                    description="Apellido"
+                    width="200px"
+                    fieldWidth="auto"
+                    class="sapUiSmallMarginBottom" />
+                <Input
+                    id="dniId2"
+                    value="{oModel>/recipient/dni}"
+                    enabled="false"
+                    description="DNI"
+                    width="200px"
+                    fieldWidth="auto"
+                    class="sapUiSmallMarginBottom" />
+                <Input
+                    id="sexoId2"
+                    value="{oModel>/recipient/sexo}"
+                    enabled="false"
+                    description="Sexo"
+                    width="200px"
+                    fieldWidth="auto"
+                    class="sapUiSmallMarginBottom" />
+                <Input
+                    id="emailId2"
+                    value="{oModel>/recipient/email}"
+                    enabled="false"
+                    description="Email"
+                    width="200px"
+                    fieldWidth="auto"
+                    class="sapUiSmallMarginBottom" />
+                <Button id="botonHabilitar" text="Editar" width="auto" press="onPress3" enabled="true"/>
+            </l:VerticalLayout>
+        </content>
+    </Page>
+    
+</mvc:View>
