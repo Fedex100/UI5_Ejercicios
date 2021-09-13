@@ -1,0 +1,40 @@
+<mvc:View
+    controllerName="ejer2.ejer2.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout">
+>	
+				<Page id="page" title="{i18n>title}">
+					<content>
+                        <l:VerticalLayout  class="sapUiContentPadding" width="100%">
+                            <Input
+                                id="numero1Id"
+                                value="{oModel>/recipient/numero1}"
+                                enabled="true"
+                                description="Numero 1"
+                                width="100px"
+                                fieldWidth="auto"
+                                class="sapUiSmallMarginBottom" />
+                            <Input
+                                id="numero2Id"
+                                value="{oModel>/recipient/numero2}"
+                                enabled="true"
+                                description="Numero 2"
+                                width="100px"
+                                fieldWidth="auto"
+                                class="sapUiSmallMarginBottom" />
+                            <Button text="Sumar" width="auto" press="onPress"/>
+                            <Input
+                                id="resultadoId"
+                                value="{oModel>/recipient/resultado}"
+                                enabled="false"
+                                description="Resultado"
+                                width="100px"
+                                fieldWidth="auto"
+                                class="sapUiSmallMarginBottom" />
+                        </l:VerticalLayout>
+                    </content>
+				</Page>
+			
+</mvc:View>
