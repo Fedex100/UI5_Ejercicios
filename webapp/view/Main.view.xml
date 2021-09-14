@@ -1,0 +1,20 @@
+<mvc:View
+    controllerName="ejer5.ejer5.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+	
+    <Page id="page" title="{i18n>title}">
+		<content>
+            <ComboBox
+                id="womboCombo"
+                items="{oToolsModel>/ciudades}">
+				<core:Item key="{oToolsModel>name}" text="{oToolsModel>name}" />
+			</ComboBox> 
+            <Button text="Setear" width="auto" press="onPress"/>
+        </content>
+    </Page>
+    
+</mvc:View>
