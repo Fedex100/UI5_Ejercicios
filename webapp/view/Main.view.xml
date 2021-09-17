@@ -1,0 +1,20 @@
+<mvc:View
+    controllerName="ejer13.ejer13.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+	
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <FlexBox>
+                <VBox >
+                <Text text="Probando el fragment al presionar el boton toma 2: "></Text> 
+                    <Button text="{i18n>btnFrag}" width="auto" press="onPress"/>
+                </VBox>
+        </FlexBox>
+        </content>
+    </Page>
+   
+</mvc:View>
