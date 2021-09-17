@@ -1,0 +1,31 @@
+{
+    "value": [
+        {
+            "codigo_producto": "210605120522 1",
+            "cod_interno": 1800,
+            "fecha_creacion": "2020-11-20T00:00:00Z",
+            "fecha_vencimiento": "2020-12-31T00:00:00Z",
+            "desc_producto": "Producto 1",
+            "nombre_empresa": "CLIENTE Producto 1",
+            "origen": "Argentina"
+        },
+        {
+            "codigo_producto": "123456789123 2",
+            "cod_interno": 2800,
+            "fecha_creacion": "2020-01-20T00:00:00Z",
+            "fecha_vencimiento": "2021-12-31T00:00:00Z",
+            "desc_producto": "Producto 2",
+            "nombre_empresa": "CLIENTE Producto 2",
+            "origen": "Uruguay"
+        },
+        {
+            "codigo_producto": "234567891234 3",
+            "cod_interno": 3800,
+            "fecha_creacion": "2020-01-20T00:00:00Z",
+            "fecha_vencimiento": "2021-12-31T00:00:00Z",
+            "desc_producto": "Producto 3",
+            "nombre_empresa": "CLIENTE Producto 3",
+            "origen": "Uruguay"
+        }
+    ]
+}

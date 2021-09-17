@@ -1,0 +1,149 @@
+<mvc:View
+    controllerName="ejer6.ejer6.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+	
+    <Page id="page" title="{i18n>title}">
+		<content>
+            <Input 
+            id="inputId"
+            value="{oDataModel>/empresa/nombre}" 
+            description="{i18n>empresa}"/>
+            <Input 
+            id="cantEmpleadosId"
+            value="{oDataModel>/empresa/informacion/empleados}" 
+            description="{i18n>cantEmpleados}"/>
+            
+            <Select
+                id="contactosId"
+                items="{oDataModel>/empresa/contactos}">
+            <items>
+				<core:Item key="{oDataModel>telefono}" text="{oDataModel>nombre}" />
+            </items>
+			</Select> 
+            
+            <Button text="{i18n>btnSelec}" width="auto" press="onPress"/>
+    
+    <Table id="idTableProductos" items="{path: 'productoJSON>/value'}">
+        <headerToolbar>
+            <OverflowToolbar>
+                <content>
+                    <SearchField liveChange=".onSearch" width="100%" />
+                </content>
+            </OverflowToolbar>
+        </headerToolbar>
+
+        <columns>
+            <Column>
+                <Text text="{i18n>codProd}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>codInt}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>fechaCrea}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>fechaVenc}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>descProdu}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>nomEmpresa}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>origen}" />
+            </Column>
+        </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{productoJSON>codigo_producto}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{path:'productoJSON>cod_interno', formatter:'.Formatter.formatCodInt'}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{path:'productoJSON>fecha_creacion', formatter:'.Formatter.formatDate'}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{path:'productoJSON>fecha_vencimiento', formatter:'.Formatter.formatDate'}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{productoJSON>desc_producto}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{productoJSON>nombre_empresa}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{productoJSON>origen}"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+    </Table>
+    <Table id="idTableProductos8" items="{path: 'productoJSON>/value'}">
+        <headerToolbar>
+            <OverflowToolbar>
+                <content>
+                    <SearchField liveChange=".onSearch2" width="100%" />
+                </content>
+            </OverflowToolbar>
+        </headerToolbar>
+
+        <columns>
+            <Column>
+                <Text text="{i18n>codProd}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>codInt}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>fechaCrea}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>fechaVenc}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>descProdu}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>nomEmpresa}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>origen}" />
+            </Column>
+        </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{productoJSON>codigo_producto}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{path:'productoJSON>cod_interno', formatter:'.Formatter.formatCodInt'}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{path:'productoJSON>fecha_creacion', formatter:'.Formatter.formatDate'}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{path:'productoJSON>fecha_vencimiento', formatter:'.Formatter.formatDate'}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{productoJSON>desc_producto}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{productoJSON>nombre_empresa}"/>
+                    </cells>
+                    <cells>
+                        <Text text="{productoJSON>origen}"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+    </Table>
+        </content>
+    </Page>
+    
+</mvc:View>
