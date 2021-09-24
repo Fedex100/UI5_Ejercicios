@@ -75,6 +75,16 @@
           "name": "RouteMainView",
           "pattern": "RouteMainView",
           "target": ["TargetMainView"]
+        },
+        {
+          "name": "Tiles",
+          "pattern": "",
+          "target": ["Tiles"]
+        },
+         {
+          "name": "first",
+          "pattern": "first",
+          "target": ["Countdown"]
         }
       ],
       "targets": {
@@ -83,6 +93,20 @@
           "viewLevel": 1,
           "viewId": "idAppControl",
           "viewName": "MainView"
+        },
+         "Tiles": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "Tiles",
+          "viewName": "Tiles",
+          "controlId": "idAppControl"
+        },
+         "Countdown": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "countdown.Countdown",
+          "viewName": "countdown.Countdown",
+          "controlId": "idAppControl"
         }
       }
     }
