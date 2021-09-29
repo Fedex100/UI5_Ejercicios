@@ -15,6 +15,7 @@ sap.ui.define([
         let myTilesModel = new JSONModel(this.timer);
         this.getView().setModel(myTilesModel, "timer");
         setInterval(this.calculateTime.bind(this),1000);
+        
       },
       calculateTime: function() {
         let techedDate = new Date("Jun 21 2022");
@@ -26,6 +27,5 @@ sap.ui.define([
         this.timer.seconds = Math.floor((diff % ( 1000 * 60  ))/ ( 1000  ) );
         this.getView().getModel("timer").setData(this.timer);
       }
-
     });
 });

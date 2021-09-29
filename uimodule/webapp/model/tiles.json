@@ -2,5 +2,9 @@
   {
     "title" : "SAP Teched 2020 Countdown",
     "route" :"first"
-  }
+  }, 
+  {
+    "title" : "Covid",
+    "route" :"second"
+  } 
 ]

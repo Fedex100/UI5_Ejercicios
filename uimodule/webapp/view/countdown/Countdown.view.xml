@@ -7,36 +7,42 @@
   xmlns:core="sap.ui.core"
   >
   <Page id = "tiles" showHeader="false">
+     
+	
     <grid:CSSGrid
 			id="grid1"
 			gridTemplateColumns="1fr"
 			gridGap="1rem">
+        <Title text="Proyecto 1. Cuenta regresiva al invierno 2022"/>
         <Image src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg"/>
-        
+      	
+
+      	
+
     <grid:CSSGrid 
         id="grid2"
         gridTemplateColumns="1fr 1fr 1fr 1fr"
         gridGap="1rem">
-		<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Days" press="press">
+		<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Dias" press="press">
 		    <TileContent >
-			    <NumericContent value="{timer>/days}" valueColor="Good" withMargin="false" />
+			    <NumericContent id="daysId" value="{timer>/days}" valueColor="Good" withMargin="false" />
 		    </TileContent>
 	    </GenericTile>
 
         <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Hours" press="press">
             <TileContent >
-                <NumericContent value="{timer>/hours}" valueColor="Good" withMargin="false" />
+                <NumericContent id="hoursId" value="{timer>/hours}" valueColor="Good" withMargin="false" />
             </TileContent>
         </GenericTile>
         <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Minutes" press="press">
 		    <TileContent >
-			    <NumericContent value="{timer>/minutes}"  valueColor="Good" withMargin="false" />
+			    <NumericContent id="minutesId" value="{timer>/minutes}"  valueColor="Good" withMargin="false" />
 		    </TileContent>
 	    </GenericTile>
 
         <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Seconds" press="press">
             <TileContent >
-                <NumericContent value="{timer>/seconds}" valueColor="Good" withMargin="false" />
+                <NumericContent id="secondsId" value="{timer>/seconds}" valueColor="Neutral" withMargin="false" />
             </TileContent>
         </GenericTile>
        

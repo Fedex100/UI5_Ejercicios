@@ -85,6 +85,21 @@
           "name": "first",
           "pattern": "first",
           "target": ["Countdown"]
+        },
+        {
+          "name": "second",
+          "pattern": "second",
+          "target": ["Covid"]
+        },
+        {
+          "name": "second-list",
+          "pattern": "second-list",
+          "target": ["Covid-List"]
+        },
+        {
+          "name": "second-pie",
+          "pattern": "second-pie",
+          "target": ["Covid-Pie"]
         }
       ],
       "targets": {
@@ -106,6 +121,27 @@
           "viewLevel": 1,
           "viewId": "countdown.Countdown",
           "viewName": "countdown.Countdown",
+          "controlId": "idAppControl"
+        },
+         "Covid": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "covid.Covid",
+          "viewName": "covid.Covid",
+          "controlId": "idAppControl"
+        },
+        "Covid-List": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "covid.List",
+          "viewName": "covid.List",
+          "controlId": "idAppControl"
+        },
+        "Covid-Pie": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "covid.Pie",
+          "viewName": "covid.Pie",
           "controlId": "idAppControl"
         }
       }
