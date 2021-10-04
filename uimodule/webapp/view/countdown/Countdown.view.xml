@@ -14,7 +14,7 @@
 			gridTemplateColumns="1fr"
 			gridGap="1rem">
         <Title text="Proyecto 1. Cuenta regresiva al invierno 2022"/>
-        <Image src="https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg"/>
+        <Image src="https://cdn.forbes.com.mx/2020/12/solsticio-de-invierno-tierra-sol-1-640x360.jpg"/>
       	
 
       	
@@ -29,18 +29,18 @@
 		    </TileContent>
 	    </GenericTile>
 
-        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Hours" press="press">
+        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Horas" press="press">
             <TileContent >
                 <NumericContent id="hoursId" value="{timer>/hours}" valueColor="Good" withMargin="false" />
             </TileContent>
         </GenericTile>
-        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Minutes" press="press">
+        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Minutos" press="press">
 		    <TileContent >
 			    <NumericContent id="minutesId" value="{timer>/minutes}"  valueColor="Good" withMargin="false" />
 		    </TileContent>
 	    </GenericTile>
 
-        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Seconds" press="press">
+        <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Segundos" press="press">
             <TileContent >
                 <NumericContent id="secondsId" value="{timer>/seconds}" valueColor="Neutral" withMargin="false" />
             </TileContent>

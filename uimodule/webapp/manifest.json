@@ -100,6 +100,11 @@
           "name": "second-pie",
           "pattern": "second-pie",
           "target": ["Covid-Pie"]
+        },
+        {
+          "name": "third",
+          "pattern": "third",
+          "target": ["Vacc"]
         }
       ],
       "targets": {
@@ -142,6 +147,13 @@
           "viewLevel": 1,
           "viewId": "covid.Pie",
           "viewName": "covid.Pie",
+          "controlId": "idAppControl"
+        },
+        "Vacc": {
+          "viewType": "XML",
+          "viewLevel": 1,
+          "viewId": "vacc.Vacc",
+          "viewName": "vacc.Vacc",
           "controlId": "idAppControl"
         }
       }
