@@ -10,5 +10,15 @@
    {
     "title" : "Vaccination Tracker",
     "route" :"third"
-  } 
+  }, 
+   {
+    "title" : "4th App",
+    "route" :"EXT-third",
+    "url": "https://workspaces-ws-7t96c-app3.us10.trial.applicationstudio.cloud.sap/index.html"
+  },
+  {
+    "title" : "La biblia de SAPUI5",
+    "route" :"Eleven",
+    "url": "https://sapui5.hana.ondemand.com/#/"
+  }  
 ]

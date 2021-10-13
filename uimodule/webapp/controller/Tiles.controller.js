@@ -10,7 +10,13 @@ sap.ui.define([
         this.getView().setModel(myTilesModel, "tiles")    
       },
       press:function(oRoute){
+        if(oRoute.substring(0,4) == 'EXT-' || 'Elev'){
+          let selItem = JSON.parse(this.getView().getModel("tiles").getJSON()).find(item => {if (item.route == oRoute){ return item;}} )
+          sap.m.URLHelper.redirect(selItem.url);
+        }
+        {
         this.getOwnerComponent().getRouter().navTo(oRoute);
       }
+    }
     });
 });
