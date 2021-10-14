@@ -1,0 +1,70 @@
+{
+  "name": "Federico Fedex",
+  "email": "test@test.com",
+  "designation": "Developer",
+  "phone": "+54911-112-233-4455",
+  "currentcompany": "Accenture",
+  "education": [
+    {
+      "type": "Xth",
+      "per": "100%",
+      "year": "2010"
+    },
+    {
+      "type": "XIIth",
+      "per": "100%",
+      "year": "2014"
+    },
+    {
+      "type": "XIVth",
+      "per": "100%",
+      "year": "2021"
+    }
+  ],
+  "certification": [
+    {
+      "name": "SAPUI5",
+      "year": 2021
+    },
+    {
+      "name": "JavaScript",
+      "year": 2021
+    },
+    {
+      "name": "Google Cloud",
+      "year": 2021
+    }
+  ],
+  "employment":[
+    {
+      "name":"Accenture",
+      "projects":[{
+          "name":"Project1",
+          "type":"Implementation"
+      },
+      {   "name":"Project2",
+          "type":"Support"
+      }]
+  },
+  {
+      "name":"TSoft",
+      "projects":[{
+          "name":"Project3",
+          "type":"Implementation1",
+          "projects":[
+            {
+              "name":"FICO Reconciliation",
+              "type":"Report"
+            },
+            {
+              "name":"Track and Trace",
+              "type":"Report Dashboard"
+            }
+          ]
+      },
+      {   "name":"Project3",
+          "type":"Support1"
+      }]
+  
+}]
+}
