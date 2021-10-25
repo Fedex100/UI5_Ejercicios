@@ -1,5 +1,11 @@
-sap.ui.define(["com/te/captcha/controller/BaseController"], function (Controller) {
+sap.ui.define(["com/te/captcha/controller/BaseController"
+],
+function (Controller) {
     "use strict";
 
-    return Controller.extend("com.te.captcha.controller.MainView", {});
+    return Controller.extend("com.te.captcha.controller.MainView", {
+       onValid: function(oEvent){
+      alert(`Valid Captcha ${oEvent.getParameter("value")}`)
+    }
+    });
 });
